@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad/"
+     xml:base="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ciberseguridad="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#afecta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#afecta">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#explota -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#explota">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Vulnerabilidad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#mitiga -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#mitiga">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#protegidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#protegidoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#requiere -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#requiere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Política"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#criticidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#criticidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#descripcion">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#fechaDeteccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#fechaDeteccion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Vulnerabilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#nivelRiesgo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#nivelRiesgo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#protegidoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#afecta"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Aplicacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Aplicacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Ataque_DDoS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Ataque_DDoS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Autenticacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Autenticacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Base_datos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Base_datos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cifrado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cifrado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Contrasenas_debiles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Contrasenas_debiles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Vulnerabilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cross-Site_Scripting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cross-Site_Scripting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Vulnerabilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Inyeccion_SQL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Inyeccion_SQL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Vulnerabilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Malware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Malware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Phishing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Phishing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Amenaza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_acceso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_acceso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Política"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_contrasenas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_contrasenas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Política"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_respaldo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_respaldo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Política"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Política -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Política"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Respaldo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Respaldo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Servidor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Servidor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Activo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Vulnerabilidad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Vulnerabilidad"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Base_Datos_Clientes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Base_Datos_Clientes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Base_datos"/>
+        <ciberseguridad:protegidoPor rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cifrado_AES256"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cifrado_AES256 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cifrado_AES256">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cifrado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Google_2FA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Google_2FA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Autenticacion"/>
+        <ciberseguridad:mitiga rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Phishing_Corporativo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Password_123456 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Password_123456">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Contrasenas_debiles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Phishing_Corporativo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Phishing_Corporativo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Phishing"/>
+        <ciberseguridad:afecta rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Servidor_Web"/>
+        <ciberseguridad:nivelRiesgo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ciberseguridad:nivelRiesgo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_Accesos_Corporativo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_Accesos_Corporativo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_acceso"/>
+        <ciberseguridad:requiere rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Google_2FA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_Backup_Diario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_Backup_Diario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Politica_respaldo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Ransomware_Empresarial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Ransomware_Empresarial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Malware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Servidor_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Servidor_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Servidor"/>
+        <ciberseguridad:protegidoPor rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Google_2FA"/>
+        <ciberseguridad:criticidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ciberseguridad:criticidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#XSS_Formulario_Login -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#XSS_Formulario_Login">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fermax/ontologies/2026/4/ciberseguridad#Cross-Site_Scripting"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
